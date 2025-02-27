@@ -1,0 +1,235 @@
+$negro: #424241;
+$blanco: #FAF8F5;
+$gris: #9E9D9B;
+$fondo: #DEDAD5;                    
+
+$font-primary: "Playfair Display", serif;
+$poppins: "Poppins", sans-serif;
+
+* {
+    border: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-family: $poppins;
+    overflow-x: hidden;
+    min-height: 100vh;
+
+    &::before{
+        content: '';
+        background-color: $fondo;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 45%;
+        height: 100%;
+        z-index: -1;
+    }
+}
+
+
+header{
+    display: flex;
+    padding-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.head{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    
+    &_menu{
+        display: flex;
+        gap: 50px;
+        list-style: none;
+        
+        a{
+            text-decoration: none;
+            color: $gris;
+        }
+        
+    }
+}
+
+.negro{
+    color: $negro !important;
+}
+
+.hero{
+    max-width: 50%;
+    padding-top: 30px;
+    &_title{
+        font-family: $font-primary;
+        font-weight: 400;
+        font-size: 59px;
+        line-height: 75px;
+        color: $negro;
+        padding-top: 65px;
+        position: relative;
+
+        &::before{
+            content: '';
+            background-color: $fondo;
+            opacity: 25%;
+            position: absolute;
+            top: 50px;
+            left: -20px;
+            width: 260px;
+            height: 70px;
+            z-index: -1;
+        }
+    }
+
+    &_subtitle{
+        font-size: 22px;
+        font-weight: 400;
+        color: $gris;
+        line-height: 30px;
+        padding-top: 20px;
+    }
+
+    &_botones{
+        align-items: center;
+        padding-top: 40px;
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        &_1{
+            text-decoration: none;
+            display: inline-flex; 
+            align-items: center;
+            padding: 10px 15px;
+            background-color: $negro;
+            color: $blanco;
+            gap: 5px;
+        }
+        &_2{
+            text-decoration: none;
+            display: inline-flex; 
+            align-items: center;
+            text-decoration: none;
+            color: $negro;
+        }
+    }
+
+    &_info{
+        padding-top: 180px;
+        display: flex;
+        gap: 60px;
+
+        &::before{
+            content: '';
+            background-color: $fondo;
+            opacity: 25%;
+            position: absolute;
+            bottom: -70px;
+            left: 550px;
+            width: 700px;
+            height: 80px;
+            z-index: -1;
+        }
+    }
+
+    &_article{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+        max-width: 100px;
+        position: relative;
+
+        h2{
+            color: $negro;
+            font-weight: 500;
+            font-size: 50px;
+        }
+
+        p{
+            font-weight: 400;
+            color: $gris;
+            font-size: 16px;
+            line-height: 30px;
+        }
+    }
+}
+
+.details{
+    position: absolute;
+    bottom: -80px;
+    right: 120px;
+    color: $negro;
+    font-weight: 400;
+    background-color: $blanco;
+    padding: 10px 20px 5px 20px;
+    
+
+    &_title{
+        font-size: 16px;
+        align-items: start;
+        margin-bottom: 10px;
+        padding-top: 15px;
+    }
+
+    article{
+        display: flex;
+        font-size: 20px;
+        align-items: center;
+        gap: 20px;
+        border-bottom: 1px solid $fondo;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+
+    &_number{
+        color: $gris !important;
+        font-size: 18px;
+    }
+
+    &_flecha{
+        margin-left: auto;
+    }
+
+    &_word{
+        padding-right: 30px;
+    }
+
+    
+}
+
+
+
+.foto1{
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    top: 120px;
+    left: 610px;
+    z-index: -1;
+}
+
+.foto2{
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    top: 120px;
+    right: 80px;
+    max-width: none;
+    z-index: -1;
+}
+
